@@ -22,6 +22,18 @@ import {
 import { Menu } from "lucide-react";
 import { MegaMenu } from "@/components/shared/MegaMenu";
 import { X } from 'lucide-react';
+import { MobileNavLinks } from "@/lib/MobileNavLinks"
+import { productsMenuData } from "@/data/menuData"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
+import { IoHome } from "react-icons/io5";
+import { AiOutlineProduct } from "react-icons/ai";
+import { MdContactSupport } from "react-icons/md";
+import { RiContactsFill } from "react-icons/ri";
 
 export function Navbar() {
     return (
@@ -72,33 +84,86 @@ export function Navbar() {
 
             {/* MOBILE HAMBURGER MENU */}
 
-            <Sheet>
+            <Sheet >
                 <SheetTrigger asChild>
                     <Menu className="block lg:hidden w-8 h-8 cursor-pointer" />
                 </SheetTrigger>
-                <SheetContent className="bg-linear-to-l from-white to-gray-100 w-full h-full p-6">
-                    <SheetHeader>
-                        <SheetTitle className="text-2xl font-bold mb-4 text-center">Menu</SheetTitle>
-                    </SheetHeader>
-                    <nav className="flex flex-col gap-6 mt-8">
-                        <Link href="/" className="text-lg font-medium hover:text-primary border-b-2 border-gray-100 pb-1">
-                            Accueil
-                        </Link>
-                        <Link href="/products" className="text-lg font-medium hover:text-primary">
-                            Produits
-                        </Link>
-                        <Link href="/contact" className="text-lg font-medium hover:text-primary">
-                            Contact
-                        </Link>
-                        <Link href="/a-propos" className="text-lg font-medium hover:text-primary">
-                            À Propos
-                        </Link>
-                    </nav>
-                    <SheetFooter>
-                        <SheetClose asChild>
-                            <X className="h-8 w-8 rounded bg-gray-900 text-white cursor-pointer" />
-                        </SheetClose>
-                    </SheetFooter>
+
+                <SheetContent side="right" className="w-[320px] h-full bg-white p-0">
+                    <div className="flex h-full flex-col">
+
+                        <div className="border-b p-4">
+                            <h2 className="font-bold text-lg">
+                                La Gravure Moderne
+                            </h2>
+                        </div>
+
+                        <div className="flex-1 overflow-y-auto p-4">
+
+                            <Link
+                                href="/"
+                                className="flex items-center gap-3 py-3"
+                            >
+                                <IoHome className="h-5 w-5" />
+                                <span>Accueil</span>
+                            </Link>
+
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="products">
+                                    <AccordionTrigger>
+                                        <div className="flex items-center gap-3">
+                                            <AiOutlineProduct className="h-5 w-5" />
+                                            <span>Produits</span>
+                                        </div>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent>
+                                        {productsMenuData.map((category) => (
+                                            <div key={category.title} className="mb-4">
+                                                <h3 className="font-semibold text-sm">
+                                                    {category.title}
+                                                </h3>
+
+                                                <div className="ml-4 mt-2 flex flex-col gap-2">
+                                                    {category.items.map((item) => (
+                                                        <Link
+                                                            key={item.href}
+                                                            href={item.href}
+                                                            className="py-1"
+                                                        >
+                                                            {item.title}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+
+                            <Link
+                                href="/contact"
+                                className="flex items-center gap-3 py-3"
+                            >
+                                <MdContactSupport className="h-5 w-5" />
+                                <span>Contact</span>
+                            </Link>
+
+                            <Link
+                                href="/a-propos"
+                                className="flex items-center gap-3 py-3"
+                            >
+                                <RiContactsFill className="h-5 w-5" />
+                                <span>À Propos</span>
+                            </Link>
+
+                        </div>
+
+                        <div className="border-t p-4 text-sm text-muted-foreground">
+                            Contactez-nous : 54545454
+                        </div>
+
+                    </div>
                 </SheetContent>
             </Sheet>
         </nav >
