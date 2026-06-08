@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react"; // Modern package import
+import { Variants } from "framer-motion";
 
 import {
     Card,
@@ -53,12 +54,19 @@ const containerVariants = {
 };
 
 // Motion configuration for each individual card item
-const itemVariants = {
-    hidden: { opacity: 0, y: 30 }, // Start invisible and pushed down slightly
+const itemVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { type: "spring", stiffness: 100, damping: 15 }
+        transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+        },
     },
 };
 
