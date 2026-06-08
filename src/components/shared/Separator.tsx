@@ -9,7 +9,7 @@ export function Separator({
     description,
 }: SeparatorProps) {
     return (
-        <div className="w-full mx-auto py-16 bg-gray-100 text-center">
+        <div className="w-full mx-auto py-16 bg-[#fff] text-center">
             <Container>
                 <h2 className="text-3xl font-bold">{title}</h2>
                 <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
