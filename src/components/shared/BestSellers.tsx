@@ -14,11 +14,11 @@ import { Button } from "@/components/ui/button";
 const seededProducts = [
     {
         id: "p1",
-        title: "Trodat Printy 4911",
+        title: "Trodat Printy 4912",
         category: "Tampons Automatiques",
         description: "Tampon encreur automatique idéal pour 3 à 4 lignes de texte de société.",
         dimensions: "38 x 14 mm",
-        image: "https://images.unsplash.com/photo-1708014114844-8a9c7d6d107e?w=500&auto=format&fit=crop&q=60",
+        image: "https://www.tuniprint.pro/wp-content/uploads/2017/05/trodat4913-500x500.jpg",
         href: "/products/tampons/automatiques/trodat-4911",
     },
     {
@@ -36,7 +36,7 @@ const seededProducts = [
         category: "Plexiglass",
         description: "Plaque en plexiglass transparent avec gravure arrière, effet brillant.",
         dimensions: "300 x 200 mm",
-        image: "https://images.unsplash.com/photo-1550438655-400744b9fefc?w=500&auto=format&fit=crop&q=60",
+        image: "https://i.pinimg.com/564x/0c/75/f3/0c75f3b5fb2c7fff93541bc7279b811b.jpg",
         href: "/products/plaques/de-bureau/cabinet-plexi",
     },
     {
@@ -45,16 +45,16 @@ const seededProducts = [
         category: "Autres Produits",
         description: "Pince de sécurité en fonte d'acier pour scellés de sécurité industriels.",
         dimensions: "Longueur 165 mm",
-        image: "https://images.unsplash.com/photo-1573046171778-f6506436ec62?w=500&auto=format&fit=crop&q=60",
+        image: "https://www.manutan.be/img/S/GRP/ST/AIG279515.jpg",
         href: "/products/autres/pince-a-plomber",
     },
     {
         id: "p5",
-        title: "Trodat Professional 5204",
+        title: "Trodat Professional 4638",
         category: "Tampons Automatiques",
         description: "Tampon métallique lourd pour un usage intensif et répétitif en bureau.",
         dimensions: "56 x 26 mm",
-        image: "https://images.unsplash.com/photo-1578531504112-0dcd95eda450?w=500&auto=format&fit=crop&q=60",
+        image: "https://digiprint.tn/web/image/product.template/2913/image_1024?unique=08fd246",
         href: "/products/tampons/automatiques/trodat-5204",
     },
     {
@@ -68,20 +68,20 @@ const seededProducts = [
     },
     {
         id: "p7",
-        title: "Tampon Dateur Shiny",
+        title: "Timbre de Poche",
         category: "Tampons Automatiques",
         description: "Dateur automatique réglable avec texte personnalisé d'accompagnement.",
         dimensions: "45 x 45 mm",
-        image: "https://images.unsplash.com/photo-1583225214464-929602942779?w=500&auto=format&fit=crop&q=60",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaldMw-5EfFSifdpSPSs5c_yab_RJWwtF2hg&s",
         href: "/products/tampons/dateurs/shiny-dateur",
     },
     {
         id: "p8",
-        title: "Recharge d'encre Trodat 7011",
+        title: "Mini Dateur 4810",
         category: "Encre et Accessoires",
         description: "Flacon d'encre de rechange pour boîtiers manuels et cassettes automatiques.",
         dimensions: "28 ml",
-        image: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=60",
+        image: "https://ctstunisie.com/17044-large_default/dateur-automatiquetrodat-4810-francais.jpg",
         href: "/products/tampons/encre-et-accessoires/encre-7011",
     },
 ];
@@ -99,9 +99,6 @@ export function GridSection({ className }: GridSectionProps) {
                     <h2 className="text-2xl font-bold tracking-tight text-foreground">
                         Produits Vedettes
                     </h2>
-                    <span className="text-sm text-muted-foreground font-mono">
-                        {seededProducts.length} articles disponibles
-                    </span>
                 </div>
 
                 {/* The responsive grid container */}
@@ -116,7 +113,7 @@ export function GridSection({ className }: GridSectionProps) {
                                     alt={product.title}
                                     fill
                                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
-                                    className="object-cover transition-transform duration-300 group-hover:scale-103"
+                                    className="object-contain transition-transform duration-300 group-hover:scale-103"
                                 />
                                 {/* Category Badge Overlaid on Image */}
                                 <span className="absolute top-3 left-3 bg-black/70 backdrop-blur-sm text-[10px] font-mono uppercase tracking-wider text-white px-2 py-0.5 rounded-sm">
