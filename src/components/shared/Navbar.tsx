@@ -54,7 +54,9 @@ export function Navbar() {
 
                         <NavigationMenuItem>
                             <NavigationMenuTrigger className="text-[18px] font-medium hover:text-primary">
-                                Produits
+                                <Link href="/products" className="text-[18px] font-medium hover:text-primary">
+                                    Produits
+                                </Link>
                             </NavigationMenuTrigger>
                             <NavigationMenuContent className="bg-white shadow-lg rounded-md p-4">
                                 <MegaMenu />
