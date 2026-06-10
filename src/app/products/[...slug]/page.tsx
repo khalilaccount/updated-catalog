@@ -96,7 +96,7 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
     // 1. CASE: SINGLE PRODUCT VIEW (/products/category/subcategory/id)
     if (slug.length === 3 && product) {
         return (
-            <Container className="py-12">
+            <Container>
                 <BreadcrumbHeader />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
@@ -126,7 +126,7 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
     if (categoryProducts.length === 0) notFound();
 
     return (
-        <Container className="py-12">
+        <Container>
             <BreadcrumbHeader />
 
             <div className="mb-10 mt-4">
