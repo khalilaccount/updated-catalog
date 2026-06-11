@@ -37,7 +37,7 @@ import { RiContactsFill } from "react-icons/ri";
 
 export function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-linear-to-r from-white to-gray-100 h-22 shadow-md flex items-center justify-between px-16">
+        <nav className="sticky top-0 z-50 w-full bg-linear-to-r from-white to-gray-100 h-22 shadow-md flex items-center justify-between px-4 lg:px-16">
             <h1 className="text-xl font-bold">La Gravure Moderne</h1>
 
             {/* Desktop Navigation - hidden on md and below */}

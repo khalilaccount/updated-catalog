@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: false, // Disabling Strict Mode as requested
+  reactStrictMode: false, // Désactivation du Strict Mode
   images: {
     remotePatterns: [
-      // --- Your Existing Allowed Hostnames ---
+      // --- Hostnames déjà autorisés ---
       {
         protocol: "https",
         hostname: "images.unsplash.com",
@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "img.kwcdn.com",
       },
-      // --- New Additions from Seeded Catalog Data ---
       {
         protocol: "https",
         hostname: "www.tuniprint.pro",
@@ -42,6 +41,28 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ctstunisie.com",
       },
+
+      // --- Nouveaux domaines pour Cachets et Accessoires ---
+      {
+        protocol: "https",
+        hostname: "cdn.alkor-groupe.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.trodat.net",
+      },
+      {
+        protocol: "https",
+        hostname: "librairiebouarroudj.com",
+      },
+      {
+        protocol: "https",
+        hostname: "le-tampon-francais.fr",
+      },
+      {
+        protocol: "https",
+        hostname: "images-eu.ssl-images-amazon.com",
+      }
     ],
   },
 };

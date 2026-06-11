@@ -16,7 +16,7 @@ export const productsMenuData = [
             },
             {
                 title: "Cachets A Cire",
-                href: "/products/tampons/cachets-cire",
+                href: "/products/tampons/cachets-a-cire",
             },
             {
                 title: "Encre Et Accessoires",

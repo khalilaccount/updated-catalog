@@ -33,7 +33,7 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
     // --- BREADCRUMB GENERATOR LOGIC ---
     // We build a reusable breadcrumb header that works for both views
     const BreadcrumbHeader = () => (
-        <div className="mb-8">
+        <div className="my-8">
             <Breadcrumb>
                 <BreadcrumbList>
                     {/* Always show Home and Main Catalog */}
@@ -100,8 +100,13 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
                 <BreadcrumbHeader />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
-                    <div className="relative aspect-square w-full rounded-lg border bg-zinc-50 overflow-hidden">
-                        <Image src={product.images[0]} alt={product.title} fill className="object-contain p-4" />
+                    <div className="relative w-full h-[350px] md:h-[450px] rounded-lg border bg-zinc-50 overflow-hidden">
+                        <Image
+                            src={product.images[0]}
+                            alt={product.title}
+                            fill
+                            className="object-contain p-8" // Increased padding helps 'shrink' the image visually
+                        />
                     </div>
                     <div className="space-y-6">
                         <div>
@@ -122,6 +127,7 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
 
     // 2. CASE: CATEGORY/SUBCATEGORY GRID VIEW (/products/category or /products/category/subcategory)
     const categoryProducts = products.filter((p) => p.href.startsWith(targetHref));
+    console.log(targetHref);
 
     if (categoryProducts.length === 0) notFound();
 
@@ -134,7 +140,7 @@ export default async function DynamicProductPage({ params }: ProductPageProps) {
                 <p className="text-muted-foreground mt-2">Découvrez notre sélection de {slug[slug.length - 1].replace(/-/g, " ")}.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {categoryProducts.map((p) => (
                     <Link key={p.id} href={p.href} className="group">
                         <Card className="h-full flex flex-col hover:shadow-lg transition-shadow">

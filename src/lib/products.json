@@ -76,11 +76,11 @@
         "title": "Trodat Printy 4925",
         "description": "Tampon rectangulaire allongé, idéal pour les mentions de chèques ou longs textes administratifs sur une seule ligne.",
         "category": "Tampons",
-        "subcategory": "Tampons Automatiques",
+        "subcategory": "En Bois",
         "images": [
             "https://images.unsplash.com/photo-1708014114844-8a9c7d6d107e?w=600"
         ],
-        "href": "/products/tampons/automatiques/ca4925",
+        "href": "/products/tampons/en-bois/ca4925",
         "price": null
     },
     {
@@ -150,9 +150,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1605250803010-37d03931db8f?w=500"
+            "https://cdn.alkor-groupe.com/medias/A0ACCB2C88CAF974DAF18B58C472A6AC/WEB/140500/140567_QmllM3ZLN1dFVTdWU3NoVnB2a3BVUjBkUFg1M2xORFlETmJiaHZiWGFvZz0=.jpg"
         ],
-        "href": "/products/tampons/accessoires/boite-tampon-petit",
+        "href": "/products/tampons/encre-et-accessoires/boite-tampon-petit",
         "price": null
     },
     {
@@ -162,9 +162,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1605250803010-37d03931db8f?w=500"
+            "https://cdn.alkor-groupe.com/medias/A0ACCB2C88CAF974DAF18B58C472A6AC/WEB/140500/140567_QmllM3ZLN1dFVTdWU3NoVnB2a3BVUjBkUFg1M2xORFlETmJiaHZiWGFvZz0=.jpg"
         ],
-        "href": "/products/tampons/accessoires/boite-tampon-grand",
+        "href": "/products/tampons/encre-et-accessoires/boite-tampon-grand",
         "price": null
     },
     {
@@ -174,9 +174,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500"
+            "https://www.trodat.net/image_interface/b2c_website_-_live_-_35160_medium.jpg/adfa0467a3fb085f5b44047aef36f421"
         ],
-        "href": "/products/tampons/accessoires/flacon-encre",
+        "href": "/products/tampons/encre-et-accessoires/flacon-encre",
         "price": null
     },
     {
@@ -186,9 +186,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500"
+            "https://librairiebouarroudj.com/images/products/3749.jpg"
         ],
-        "href": "/products/tampons/accessoires/encrier-4911",
+        "href": "/products/tampons/encre-et-accessoires/encrier-4911",
         "price": null
     },
     {
@@ -198,9 +198,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500"
+            "https://le-tampon-francais.fr/429-thickbox_default/recharge-d-encre-pour-trodat-printy-4915.jpg"
         ],
-        "href": "/products/tampons/accessoires/encrier-4912",
+        "href": "/products/tampons/encre-et-accessoires/encrier-4912",
         "price": null
     },
     {
@@ -210,9 +210,9 @@
         "category": "Tampons",
         "subcategory": "Encre et Accessoires",
         "images": [
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500"
+            "https://images-eu.ssl-images-amazon.com/images/I/51oVdVgXTzL._AC_UL495_SR435,495_.jpg"
         ],
-        "href": "/products/tampons/accessoires/encrier-4913",
+        "href": "/products/tampons/encre-et-accessoires/encrier-4913",
         "price": null
     },
     {
@@ -238,5 +238,41 @@
         ],
         "href": "/products/plexiglass/plaques-murales",
         "price": null
+    },
+    {
+        "id": "wax001",
+        "title": "Cachet à Cire Classique",
+        "description": "Cachet traditionnel en laiton avec manche en bois. Idéal pour sceller enveloppes et invitations.",
+        "category": "Cachet à Cire",
+        "subcategory": "Classiques",
+        "images": [
+            "https://images.unsplash.com/photo-1587716283570-f71969a1f854?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FjaGV0JTIwZGUlMjBub3RhaXJlfGVufDB8fDB8fHww"
+        ],
+        "href": "/products/tampons/cachets-a-cire/wax001",
+        "price": "De 150 Dinars TTC"
+    },
+    {
+        "id": "wax002",
+        "title": "Cachet à Cire Personnalisé",
+        "description": "Cachet gravé sur mesure avec initiales, logo ou motif unique. Parfait pour un rendu exclusif.",
+        "category": "Cachet à Cire",
+        "subcategory": "Personnalisés",
+        "images": [
+            "https://images.unsplash.com/photo-1774891937400-b5e32f719fae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FjaGV0JTIwZGUlMjBub3RhaXJlfGVufDB8fDB8fHww"
+        ],
+        "href": "/products/tampons/cachets-a-cire/wax002",
+        "price": "De 150 Dinars TTC"
+    },
+    {
+        "id": "wax003",
+        "title": "Cachet à Cire Thématique",
+        "description": "Cachet décoratif avec motifs floraux, géométriques ou festifs. Idéal pour mariages et événements spéciaux.",
+        "category": "Cachet à Cire",
+        "subcategory": "Thématiques",
+        "images": [
+            "https://images.unsplash.com/photo-1642289242502-d60470239e0d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D"
+        ],
+        "href": "/products/tampons/cachets-a-cire/wax003",
+        "price": "De 150 Dinars TTC"
     }
 ]
