@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 type ContainerProps = {
-    children: ReactNode,
-    className?: ""
+    children: ReactNode;
+    className?: string; // Changed from "" to string
 }
 
 export function Container({

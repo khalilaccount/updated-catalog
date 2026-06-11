@@ -73,7 +73,7 @@ export function Navbar() {
 
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                                <Link href="/a-propos" className="text-[18px] font-medium hover:text-primary">
+                                <Link href="/about" className="text-[18px] font-medium hover:text-primary">
                                     À Propos
                                 </Link>
                             </NavigationMenuLink>

@@ -10,7 +10,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
 });
-
+import { ContactSection } from "@/components/shared/ContactSection";
 export default function Page() {
   return (
     <div>
@@ -25,6 +25,7 @@ export default function Page() {
         description="Retrouvez les produits les plus appréciés par nos clients pour leur qualité, leur durabilité et leur finition soignée."
       />
       <GridSection />
+      <ContactSection />
     </div>
   );
 }
