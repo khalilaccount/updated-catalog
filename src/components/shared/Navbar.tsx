@@ -152,7 +152,7 @@ export function Navbar() {
                             </Link>
 
                             <Link
-                                href="/a-propos"
+                                href="/about"
                                 className="flex items-center gap-3 py-3"
                             >
                                 <RiContactsFill className="h-5 w-5" />
