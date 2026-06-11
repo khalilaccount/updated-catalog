@@ -34,6 +34,17 @@ import { IoHome } from "react-icons/io5";
 import { AiOutlineProduct } from "react-icons/ai";
 import { MdContactSupport } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
+import { Button } from "@/components/ui/button"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { FaChevronDown } from "react-icons/fa6";
 
 export function Navbar() {
     return (
@@ -65,14 +76,6 @@ export function Navbar() {
 
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                                <Link href="/contact" className="text-[18px] font-medium hover:text-primary">
-                                    Contact
-                                </Link>
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-
-                        <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
                                 <Link href="/about" className="text-[18px] font-medium hover:text-primary">
                                     À Propos
                                 </Link>
@@ -82,11 +85,47 @@ export function Navbar() {
                 </NavigationMenu>
             </div>
 
-            <h3 className="hidden md:block text-md font-semibold">Contactez-nous : 54545454</h3>
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                    <Button
+                        className="bg-black text-white hover:bg-zinc-900 hover:text-white transition duration-300 ease-in-out cursor-pointer"
+                        variant="outline"
+                    >
+                        <span className="mr-2 font-semibold">Contact</span>
+                        <FaChevronDown />
+                    </Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="bg-white text-black min-w-[200px]">
+
+                    {/* 1. Item Téléphone — Entièrement cliquable */}
+                    <DropdownMenuItem asChild className="focus:bg-zinc-200 focus:text-white cursor-pointer p-3">
+                        <a href="tel:+21671700800" className="flex items-start gap-3 w-full">
+                            <FaPhoneAlt className="mt-1 h-4 w-4 shrink-0" />
+                            <div className="flex flex-col line-height-tight">
+                                <span className="text-xs font-semibold opacity-70">Téléphone</span>
+                                <span className="text-sm font-medium">71 700 800</span>
+                            </div>
+                        </a>
+                    </DropdownMenuItem>
+
+                    {/* 2. Item Email — Entièrement cliquable */}
+                    <DropdownMenuItem asChild className="focus:bg-zinc-200 focus:text-white cursor-pointer p-3">
+                        <a href="mailto:info@gravure-moderne@gmail.com" className="flex items-start gap-3 w-full">
+                            <IoMdMail className="mt-1 h-4 w-4 shrink-0" />
+                            <div className="flex flex-col line-height-tight">
+                                <span className="text-xs font-semibold opacity-70">Mail</span>
+                                <span className="text-sm font-medium">contact@votre-domaine.com</span>
+                            </div>
+                        </a>
+                    </DropdownMenuItem>
+
+                </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* MOBILE HAMBURGER MENU */}
 
-            <Sheet >
+            <Sheet>
                 <SheetTrigger asChild>
                     <Menu className="block lg:hidden w-8 h-8 cursor-pointer" />
                 </SheetTrigger>
@@ -101,7 +140,6 @@ export function Navbar() {
                         </div>
 
                         <div className="flex-1 overflow-y-auto p-4">
-
                             <Link
                                 href="/"
                                 className="flex items-center gap-3 py-3"
@@ -144,25 +182,42 @@ export function Navbar() {
                             </Accordion>
 
                             <Link
-                                href="/contact"
-                                className="flex items-center gap-3 py-3"
-                            >
-                                <MdContactSupport className="h-5 w-5" />
-                                <span>Contact</span>
-                            </Link>
-
-                            <Link
                                 href="/about"
                                 className="flex items-center gap-3 py-3"
                             >
                                 <RiContactsFill className="h-5 w-5" />
                                 <span>À Propos</span>
                             </Link>
-
                         </div>
 
-                        <div className="border-t p-4 text-sm text-muted-foreground">
-                            Contactez-nous : 54545454
+                        {/* SECTION CONTACT EN BAS - DEUX DIVS CÔTE À CÔTE */}
+                        <div className="grid grid-cols-2 bg-black text-white p-3 gap-2 border-t">
+
+                            {/* Bloc Téléphone */}
+                            <a
+                                href="tel:+21671700800"
+                                className="flex items-center gap-2 p-2 rounded-lg pointer-events-auto select-none"
+                                style={{ pointerEvents: 'auto' }}
+                            >
+                                <FaPhoneAlt className="h-4 w-4 shrink-0 text-[#169875]" />
+                                <div className="flex flex-col min-w-0">
+                                    <span className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Appeler</span>
+                                    <span className="text-xs font-semibold truncate">71 700 800</span>
+                                </div>
+                            </a>
+
+                            {/* Bloc Email */}
+                            <a
+                                href="mailto:contact@votre-domaine.com"
+                                className="flex items-center gap-2 p-2 rounded-lg pointer-events-auto select-none"
+                            >
+                                <IoMdMail className="h-4 w-4 shrink-0 text-[#169875]" />
+                                <div className="flex flex-col min-w-0">
+                                    <span className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Email</span>
+                                    <span className="text-xs font-semibold truncate">Contact</span>
+                                </div>
+                            </a>
+
                         </div>
 
                     </div>

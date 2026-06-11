@@ -11,7 +11,7 @@ import {
     Anchor
 } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 
 export default function AboutPage() {
     const currentYear = new Date().getFullYear();
@@ -100,34 +100,86 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                         {/* Carte 1: Les montures */}
-                        <Card className="border-none bg-white dark:bg-zinc-900 shadow-md">
-                            <CardContent className="pt-6 space-y-4">
-                                <div className="p-3 bg-[#169875]/10 w-fit rounded-xl">
-                                    <Award className="h-6 w-6 text-[#169875]" />
+                        <Card className="relative overflow-hidden border-none shadow-md min-h-[320px] flex flex-col justify-evenly group">
+
+                            {/* 1. L'image de fond qui prend 100% de la largeur et hauteur */}
+                            <Image
+                                fill
+                                src="https://image.made-in-china.com/202f0j00BcQvzHbWbjqu/Machine-de-fabrication-de-tampons-en-caoutchouc-de-haute-pr-cision-CO2-Graveur-laser.webp"
+                                alt="engraving-image"
+                                className="absolute inset-0 object-cover z-0 transition-transform duration-500 group-hover:scale-105"
+                            />
+
+                            {/* 2. L'overlay sombre pour garantir un contraste parfait pour le texte */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-10" />
+
+                            {/* 3. Le contenu textuel forcé au-dessus (z-20) */}
+                            <CardContent className="relative z-20 pt-6 pb-8 space-y-4 text-white">
+
+                                {/* Badge icône avec un fond plus opaque pour rester visible sur l'image */}
+                                <div className="p-3 bg-zinc-950 w-fit rounded-xl shadow-lg">
+                                    <Award className="h-6 w-6 text-white" />
                                 </div>
-                                <h3 className="text-xl font-bold">Tampons de Haute Qualité</h3>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
+
+                                <h3 className="text-xl font-bold tracking-tight text-white">
+                                    Tampons de Haute Qualité
+                                </h3>
+
+                                {/* Remplacement de text-muted-foreground par text-zinc-200 pour la lisibilité */}
+                                <p className="text-zinc-200 text-sm leading-relaxed">
                                     Partenaire officiel des plus grandes marques mondiales comme <strong>Trodat</strong> et <strong>Colop</strong>. Nous garantissons des mécanismes fluides, rechargeables et conçus pour des centaines de milliers d'empreintes nettes.
                                 </p>
+
                             </CardContent>
                         </Card>
 
                         {/* Carte 2: Plexiglass & Peinture Astral */}
-                        <Card className="border-none bg-white dark:bg-zinc-900 shadow-md">
-                            <CardContent className="pt-6 space-y-4">
+                        <Card className="relative overflow-hidden border-none shadow-md min-h-[320px] flex flex-col justify-end group">
+
+                            {/* 1. L'image de fond qui prend 100% de la largeur et hauteur */}
+                            <Image
+                                fill
+                                src="https://www.acrylite.co/files/content/acrylite.co/products/product-brands/acrylite-acrylic-sheet.jpg"
+                                alt="engraving-image"
+                                className="absolute inset-0 object-cover z-0 transition-transform duration-500 group-hover:scale-105"
+                            />
+
+                            {/* 2. L'overlay sombre pour garantir un contraste parfait pour le texte */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-10" />
+
+                            {/* 3. Le contenu textuel forcé au-dessus (z-20) */}
+                            <CardContent className="relative z-20 pt-6 pb-8 space-y-4 text-white">
+
+                                {/* Badge icône avec un fond plus opaque pour rester visible sur l'image */}
                                 <div className="p-3 bg-[#169875]/10 w-fit rounded-xl">
-                                    <Layers className="h-6 w-6 text-[#169875]" />
+                                    <Layers className="h-6 w-6 text-" />
                                 </div>
                                 <h3 className="text-xl font-bold">Plexiglass & Peinture Haute Qualité</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
                                     Spécialistes des plaques en Plexiglass haut de gamme. Nous utilisons la peinture <strong>Astral</strong> pour assurer des finitions impeccables, une netteté absolue des caractères et une résistance maximale au temps.
                                 </p>
+
                             </CardContent>
                         </Card>
 
+
+
                         {/* Carte 3: Marquage sur Fer */}
-                        <Card className="border-none bg-white dark:bg-zinc-900 shadow-md">
-                            <CardContent className="pt-6 space-y-4">
+                        <Card className="relative overflow-hidden border-none shadow-md min-h-[320px] flex flex-col justify-end group">
+                            {/* 1. L'image de fond qui prend 100% de la largeur et hauteur */}
+                            <Image
+                                fill
+                                src="https://www.lfc.com.sg/_assets/tinymcpuk/gambar/image/Blogs/dot%20peen%20marking/stylus%20dot%20peen%20marking.jpg"
+                                alt="engraving-image"
+                                className="absolute inset-0 object-cover z-0 transition-transform duration-500 group-hover:scale-105"
+                            />
+
+                            {/* 2. L'overlay sombre pour garantir un contraste parfait pour le texte */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-10" />
+
+                            {/* 3. Le contenu textuel forcé au-dessus (z-20) */}
+                            <CardContent className="relative z-20 pt-6 pb-8 space-y-4 text-white">
+                                {/* Badge icône avec un fond plus opaque pour rester visible sur l'image */}
                                 <div className="p-3 bg-[#169875]/10 w-fit rounded-xl">
                                     <Hammer className="h-6 w-6 text-[#169875]" />
                                 </div>

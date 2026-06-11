@@ -62,6 +62,18 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images-eu.ssl-images-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.acrylite.co",
+      },
+      {
+        protocol: "https",
+        hostname: "www.lfc.com.sg",
+      },
+      {
+        protocol: "https",
+        hostname: "image.made-in-china.com",
       }
     ],
   },
