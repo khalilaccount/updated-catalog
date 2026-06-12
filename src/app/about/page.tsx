@@ -37,18 +37,34 @@ export default function AboutPage() {
 
             {/* 1. HERO SECTION */}
             <section className="relative py-20 lg:py-28 bg-zinc-950 text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#169875]/20 via-zinc-950 to-zinc-950" />
+                {/* 1. Background Image spanning full width and height */}
+                <Image
+                    src="/about-bg.jpg"
+                    alt="about-bg"
+                    fill
+                    priority // Added priority because this is the hero section image
+                    className="object-cover z-0"
+                />
+
+                {/* 2. Dark overlay to dim the image background and keep text perfectly legible */}
+                <div className="absolute inset-0 bg-zinc-950/70 z-0" />
+
+                {/* 3. Content container elevated on top of the image and overlay */}
                 <Container className="relative z-10">
                     <div className="max-w-3xl space-y-6">
-                        <Badge className="bg-[#169875] hover:bg-[#169875]/90 text-white border-none px-3 py-1 text-sm font-semibold tracking-wider uppercase">
+
+                        {/* Low opacity / glassmorphism styled Badge */}
+                        <Badge className="bg-[#169875]/20 hover:bg-[#169875]/30 text-[#169875] border border-[#169875]/30 backdrop-blur-sm px-3 py-1 text-sm font-semibold tracking-wider uppercase">
                             Depuis 1975
                         </Badge>
+
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none">
                             Plus de {yearsOfExperience} ans <br />
                             <span className="text-[#169875]">d'Excellence et de Précision.</span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                            Basée au cœur de Tunis à **Bab Bhar**, La Gravure Moderne réinvente le marquage professionnel, alliant l'artisanat traditionnel aux technologies industrielles de pointe.
+
+                        <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl leading-relaxed">
+                            Basée au cœur de Tunis à <strong>Bab Bhar</strong>, La Gravure Moderne réinvente le marquage professionnel, alliant l'artisanat traditionnel aux technologies industrielles de pointe.
                         </p>
                     </div>
                 </Container>

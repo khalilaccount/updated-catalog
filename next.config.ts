@@ -74,6 +74,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "image.made-in-china.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.clecor-telecommandes.com",
       }
     ],
   },

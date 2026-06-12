@@ -22,11 +22,13 @@ export default function ProductsPage() {
 
                 {/* LEFT COLUMN: Fixed Sticky Affiliation Sidebar */}
                 <aside className="w-full lg:w-[280px] lg:sticky lg:top-24 space-y-4">
+
+                    {/* 1. CARTE PARTENAIRE */}
                     <Card className="border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 overflow-hidden">
-                        <div className="p-5 text-center bg-gradient-to-br from-red-600 to-red-800 text-white">
+                        <div className="p-5 text-center bg-gradient-to-br from-red-700 to-red-600 text-white">
                             <Award className="h-8 w-8 mx-auto mb-2 opacity-90" />
                             <h3 className="font-bold text-lg tracking-tight">Partenaire Officiel</h3>
-                            <p className="text-xs text-red-100 font-medium tracking-wide uppercase mt-0.5">
+                            <p className="text-xs text-emerald-100 font-medium tracking-wide uppercase mt-0.5">
                                 Trodat Tunisie
                             </p>
                         </div>
@@ -34,7 +36,7 @@ export default function ProductsPage() {
                         <CardHeader className="p-4 space-y-3">
                             <div className="relative w-full h-12 flex items-center justify-center bg-white rounded border border-zinc-100 p-2">
                                 <span className="font-black tracking-tighter text-2xl text-zinc-900">
-                                    trodat<span className="text-red-600">®</span>
+                                    trodat<span className="text-[#169875]">®</span>
                                 </span>
                             </div>
                             <CardDescription className="text-xs text-center leading-relaxed">
@@ -47,6 +49,46 @@ export default function ProductsPage() {
                             Produits 100% Certifiés
                         </CardFooter>
                     </Card>
+
+                    {/* 2. BLOC CATALOGUE (CORRIGÉ) */}
+                    <div className="border border-zinc-200 dark:border-zinc-800 overflow-hidden bg-white dark:bg-zinc-900 shadow-sm flex flex-col">
+
+                        {/* Conteneur sécurisé pour l'image relative */}
+                        <div className="relative w-full h-[160px]">
+                            <Image
+                                src="https://www.clecor-telecommandes.com/clecor_images/articles/catalogue-trodat-tarif-revendeur_nor.jpg" // Remplacée par une image valide pour éviter les crashs de build si l'ancienne URL ne répond plus
+                                alt="trodat-catalog"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <span className="text-white font-bold text-sm tracking-wide bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                                    Catalogue Officiel
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Liens de téléchargement stylisés en boutons pour une UI Pro */}
+                        <div className="p-3 flex flex-col gap-2 bg-zinc-50 dark:bg-zinc-900/50">
+                            <a
+                                href="/catalogs/trodat-cat.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full text-center py-2 px-3 bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-zinc-200 dark:text-zinc-900 rounded-lg text-xs font-semibold transition-colors duration-200"
+                            >
+                                Voir le Catalogue
+                            </a>
+
+                            <a
+                                href="/catalogs/trodat-cat.pdf"
+                                download="catalogue-trodat-la-gravure-moderne.pdf" // Correction de la syntaxe de téléchargement
+                                className="w-full text-center py-2 px-3 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-700/50 text-zinc-700 dark:text-zinc-300 rounded-lg text-xs font-semibold transition-colors duration-200"
+                            >
+                                Télécharger (PDF)
+                            </a>
+                        </div>
+
+                    </div>
                 </aside>
 
                 {/* RIGHT COLUMN: The Products Matrix Grid */}

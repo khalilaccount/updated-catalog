@@ -86,7 +86,7 @@ export function Navbar() {
             </div>
 
             <DropdownMenu>
-                <DropdownMenuTrigger asChild>
+                <DropdownMenuTrigger className="hidden md:flex" asChild>
                     <Button
                         className="bg-black text-white hover:bg-zinc-900 hover:text-white transition duration-300 ease-in-out cursor-pointer"
                         variant="outline"
